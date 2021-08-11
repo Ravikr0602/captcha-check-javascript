@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Captcha-Checker-form</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body> 
+<div class="contanier">
+
+  <!-------Captcha Box design start below -------->
+  <div class="box"> 
+
+    <h1 id="title">Captcha</h1>
+
+    <div class="captcha_box">
+
+      <div id="captcha">
+        <span class="get_captcha"></span>
+      </div>
+
+      <button class="reload-button"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+    </div>
+
+    <form action="#" class="input-check">
+      <input type="text" placeholder="Enter captcha here.." maxlength="6" spellcheck="false" required>
+      <button class="check_button">Submit</button>
+    </form>
+
+    <div class="status_result"></div>
+
+  </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

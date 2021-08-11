@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.contanier{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./bg_color.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #131419;
+  border-radius: 10px;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05),
+  5px 5px 15px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+
+#title
+{
+  color: #ff0047;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.box .captcha_box
+{ 
+  display: flex;
+  width: 80%;
+  height: 60px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  border: 1px solid #201d2e;
+  background: #131419;
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.1),
+  inset 2px 2px 6px rgba(0, 0, 0, 0.8);
+
+}
+
+.get_captcha
+{
+  color: #4db2ec;
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 10px;
+  transform: translate(-50%, -50%);
+  padding-left: 20px;
+}
+
+button 
+{
+  outline: none;
+  border: none;
+  background: #131419;
+  cursor: pointer;
+  color: #4db2ec;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.1),
+  2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+button:hover 
+{
+    color: #4db2ec;
+    box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.1),
+                inset 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+.reload-button{
+  width: 75px;
+  height: 100%;
+  font-size: 1.5rem;
+}
+.reload-button i{
+  transition: transform 0.3s ease;
+}
+.reload-button:hover i{
+  transform: rotate(30deg);
+}
+
+.input-check
+{
+  height: auto;
+  width: 80%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.input-check input{
+  width: 100%;
+  height: 50px;
+  outline: none;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+}
+
+input::placeholder{
+  color: #bfbfbf;
+}
+.check_button
+{
+  width: auto;
+  height: auto;
+  padding: 10px 30px;
+  font-size: 1.2rem;
+  padding: 15px 20px;
+  opacity: 0;
+}
+input:valid + .check_button{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.status_result{
+  display: none;
+  font-size: 18px;
+  text-align: center;
+  width: 80%;
+  height: auto;
+  padding: 15px 20px;
+
+}
+
+@media (min-width:769px) and (max-width:1200px)
+{
+  .box
+  {
+    width: 70%;
+  }
+}
+@media (min-width:500px) and (max-width:768px)
+{
+  .box
+  {
+    width: 80%;
+  }
+  .get_captcha
+  {
+    letter-spacing: 5px;
+    font-size: 1.6rem;
+  }
+}
+@media Screen and (max-width:499px)
+{
+  .box
+  {
+    width: 90%;
+  }
+  .get_captcha
+  {
+    letter-spacing: 3px;
+    font-size: 1rem;
+    padding-left: 10px;
+  }
+  .input-check input
+  {
+    font-size: 1rem;
+  }
+}
